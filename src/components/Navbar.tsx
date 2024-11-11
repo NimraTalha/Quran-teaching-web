@@ -20,7 +20,6 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <Link href="/">
-          {/* Using next/image for optimized images */}
           <Image 
             src="/Images/logo.png" 
             alt="Quran Learning Logo" 
@@ -28,7 +27,7 @@ const Navbar: React.FC = () => {
             height={150} // specify the height
             layout="intrinsic" // or "responsive" for automatic resizing
           />
-        </Link>
+        </Link> {/* Closing Link tag */}
       </div>
       
       {/* Hamburger icon */}
