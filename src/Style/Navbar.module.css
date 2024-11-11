@@ -1,0 +1,98 @@
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a202c; /* Dark background */
+  color: #f7fafc;
+  position: relative;
+}
+
+/* Logo styles - Using text for the logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Makes the logo circular */
+  width: 70px;
+  height: 50px;
+  
+}
+
+.logoText {
+  font-size: 1.5rem; /* Adjust the size of the text */
+  font-weight: bold;
+  color: #f7fafc; /* White color for the text */
+}
+
+/* Navigation Links */
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.navLinks li {
+  cursor: pointer;
+}
+
+.navLinks a {
+  color: #f7fafc;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.navLinks a:hover {
+  color: #e2e8f0;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #f7fafc;
+}
+
+/* Mobile menu */
+.navLinks.active {
+  display: block;
+  z-index: 9999; /* Ensure the menu stays on top */
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hide navigation links by default */
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    background-color: #1a202c;
+  }
+
+  .navLinks li {
+    margin-bottom: 1rem;
+  }
+
+  /* Show hamburger menu on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Add the active class when the menu is opened */
+  .navLinks.active {
+    display: block;
+  }
+}

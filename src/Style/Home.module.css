@@ -1,0 +1,130 @@
+/* Main container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Full-screen background image */
+.backgroundImage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/Images/bg.avif');
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Main content section */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Intro Section styles */
+.introSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Details section styles */
+.details {
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  order: 1; /* Ensures the details section comes first on larger screens */
+}
+
+.details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffdd59;
+}
+
+.details p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Image wrapper styles */
+.imageWrapper {
+  max-width: 300px;
+  width: 100%;
+  text-align: right;
+  order: 2; /* Ensures the image comes second on larger screens */
+}
+
+/* Image adjustments */
+.imageWrapper img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/* Global footer styling */
+:global(footer) {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .introSection {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .details {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .details h1 {
+    font-size: 2rem;
+  }
+
+  .details p {
+    font-size: 1rem;
+  }
+
+  .imageWrapper img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .introSection {
+    gap: 15px;
+  }
+
+  .details h1 {
+    font-size: 1.8rem;
+  }
+
+  .details p {
+    font-size: 0.9rem;
+  }
+}

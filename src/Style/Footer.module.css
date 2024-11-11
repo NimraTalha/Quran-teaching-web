@@ -1,0 +1,53 @@
+/* Footer Styling */
+.footer {
+  background-color: #1a202c;
+  color: #f7fafc;
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Add space between the text and social media icons */
+.footer p {
+  margin-bottom: 10px;
+}
+
+/* Social media icon styling */
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+}
+
+.footer .social-icons a {
+  color: #f7fafc;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #ffdd59; /* Highlight color on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .footer p {
+    font-size: 1rem; /* Slightly larger text on tablets */
+  }
+
+  .footer .social-icons a {
+    font-size: 1.2rem; /* Slightly smaller icons on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer p {
+    font-size: 0.9rem; /* Adjust text size on very small screens */
+  }
+
+  .footer .social-icons a {
+    font-size: 1.1rem; /* Even smaller icons for small mobile screens */
+  }
+}
