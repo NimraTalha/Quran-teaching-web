@@ -43,3 +43,8 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/* In your global stylesheet */
+:root {
+  --background: #f0f0f0; /* Set your background color */
+  --foreground: #333333; /* Set your foreground color */
+}
