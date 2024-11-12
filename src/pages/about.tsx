@@ -30,7 +30,7 @@ const About: React.FC = () => {
       <Navbar />
       <div className={styles.backgroundImage}></div> {/* Background image */}
       <main className={styles.main}>
-        <h2 className={styles.title}>About Our Quran Learning Program</h2>
+        <h2 className={styles.title}>About Our Teaching Program</h2>
         <section className={styles.coursesSection}>
           <h3>Our Courses</h3>
           <div className={styles.courseCard}>
