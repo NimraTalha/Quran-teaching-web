@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         <section className={styles.introSection}>
           <div className={styles.details}>
             <h1>Welcome to Our Quran Academy</h1>
-            <p>We have been providing Quranic education for over 10 years.</p>
+            <p>We have been providing Quranic and Language  education for over 10 years.</p>
             <p>Classes available via Skype and Zoom.</p>
             <p>We offer classes worldwide, including USA, UK, Canada, UAE, and more.</p>
           </div>

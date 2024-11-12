@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
   color: #fff;
   position: relative;
-  padding: 20px; /* Add padding for small screens */
+  padding: 20px;
 }
 
 /* Background image */
@@ -20,42 +20,47 @@
   background-position: center;
   background-size: cover;
   z-index: -1;
+  opacity: 0.8;
 }
 
-/* Main content section */
+/* Main content section layout */
 .main {
   display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align content at the top for better spacing */
-  padding: 50px 20px;
-  text-align: center;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center;
+  padding: 20px;
+  text-align: left;
   z-index: 1;
   width: 100%;
 }
 
 /* About Quran Learning Program Section */
 .aboutQuranLearning {
-  margin-top: 0;
-  padding: 50px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%; /* Full width */
+  margin-bottom: 30px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
+  text-align: center;
 }
 
 .aboutQuranLearning h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #ffdd59;
   margin-bottom: 20px;
 }
 
 .aboutQuranLearning p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   color: #fff;
-  margin-bottom: 30px;
+  font-weight: 700;
 }
 
 /* Styling for Courses Section */
 .coursesSection {
-  margin-top: 50px;
+  width: 100%; /* Full width */
+  margin-top: 30px;
+  text-align: center;
 }
 
 .coursesSection h3 {
@@ -66,15 +71,35 @@
 
 /* Adjusting course cards */
 .courseCard {
-  background-color: rgba(255, 255, 255, 0.105);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Ensure cards fill available space */
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 221, 89, 0.5);
+  position: relative;
+}
+
+.courseCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.courseCard * {
+  position: relative;
+  z-index: 1;
 }
 
 .courseCard h4 {
@@ -91,18 +116,36 @@
 
 .price {
   font-weight: bold;
-  color: #fff;
+  color: #ffdd59;
+  font-size: 1.2rem;
+}
+
+/* Decorative border for the card header */
+.courseCard h4::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #ffdd59;
+  margin-top: 5px;
 }
 
 /* Class Details Section */
 .classesSection {
+  width: 100%; /* Full width */
   margin-top: 50px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 221, 89, 0.5);
+  text-align: center;
 }
 
 .classesSection h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ffdd59;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .classDetails {
@@ -111,79 +154,62 @@
 }
 
 .classDetails li {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* Adjust the main content padding */
   .main {
-    padding: 30px 10px;
+    padding: 20px 10px;
   }
 
-  /* About Quran Learning Program Section */
-  .aboutQuranLearning h2 {
-    font-size: 2rem; /* Adjust font size */
-  }
-
-  /* Adjust course cards */
-  .courseCard {
-    padding: 15px; /* Adjust padding */
-    margin-bottom: 15px; /* Reduce margin */
-  }
-
-  .coursesSection h3 {
-    font-size: 2rem; /* Adjust font size */
-  }
-
-  /* Adjust font size for class details */
+  .aboutQuranLearning h2,
+  .coursesSection h3,
   .classesSection h3 {
-    font-size: 1.8rem; /* Adjust font size */
+    font-size: 2rem;
+  }
+
+  .courseCard {
+    padding: 15px;
+    margin-bottom: 15px;
   }
 
   .classDetails li {
-    font-size: 1rem; /* Smaller font size for list items */
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  /* Adjust for very small screens (mobile) */
   .container {
     padding: 15px;
   }
 
   .main {
-    padding: 20px 0;
+    padding: 15px 0;
   }
 
-  .aboutQuranLearning h2 {
-    font-size: 1.8rem; /* Reduce size */
-  }
-
+  .aboutQuranLearning h2,
   .coursesSection h3,
   .classesSection h3 {
-    font-size: 1.6rem; /* Slightly smaller headers */
+    font-size: 1.6rem;
   }
 
   .courseCard h4 {
-    font-size: 1.4rem; /* Smaller course title */
+    font-size: 1.4rem;
   }
 
-  .courseCard p {
-    font-size: 1rem; /* Smaller description */
+  .courseCard p,
+  .classDetails li {
+    font-size: 1rem;
   }
 
   .price {
-    font-size: 1rem; /* Adjust price font size */
+    font-size: 1rem;
   }
 
-  .classDetails li {
-    font-size: 0.9rem; /* Smaller font for class details */
-  }
-
-  /* Stack course cards in a column for small screens */
   .coursesSection {
     display: flex;
     flex-direction: column;
@@ -192,6 +218,6 @@
 
   .courseCard {
     width: 100%;
-    margin-bottom: 10px; /* Add space between cards */
+    margin-bottom: 10px;
   }
 }

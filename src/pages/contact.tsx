@@ -80,9 +80,9 @@ const Contact: React.FC = () => {
               <div>
                 <h4 className={styles.h4Class}>Class Schedule & Pricing</h4>
                 <ul className={styles.contactList}>
-                  <li className={styles.contactListItem}>30-minute Mo-Fri session: $5</li>
-                  <li className={styles.contactListItem}>1-hour Mon-Fri session: $10</li>
-                  <li className={styles.contactListItem}>Group Mon-Fri sessions: $8 per hour</li>
+                  <li className={styles.contactListItem}>30-minute Mo-Fri  per session: $5</li>
+                  <li className={styles.contactListItem}>1-hour Mon-Fri per session: $10</li>
+                  <li className={styles.contactListItem}>Group Mon-Fri per session: $8 per hour</li>
                 </ul>
               </div>
               <button className={styles.submitButton} type="submit">
